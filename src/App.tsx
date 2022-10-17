@@ -1,25 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Container, Typography } from '@mui/material';
+import React, { useState } from 'react';
+import ProjectList from './components/ProjectList';
+import SearchForm from './components/SearchForm';
 
 function App() {
+
+  const [keyword, setKeyword] = useState<string>('')
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container maxWidth="lg" sx={{ p: '60px 0' }}>
+      <Typography variant="h3" component="h1" color="white" textAlign="center" sx={{ mb: '15px' }}>
+        Search for freelance projects
+      </Typography>
+      <Typography variant="subtitle1" component="p" color="white" textAlign="center" sx={{ mb: '30px' }}>
+        Search for freelance projects on websites: https://freelance.habr.com, https://freelance.ru
+      </Typography>
+      <SearchForm setKeyword={setKeyword}/>
+      <ProjectList keyword={keyword}/>
+    </Container>
   );
 }
 
