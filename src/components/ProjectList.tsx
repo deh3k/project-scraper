@@ -80,7 +80,7 @@ export default function ProjectList(props: IProps) {
       }
       {!scrapResult?.length && !isLoading && 
         <Typography textAlign="center" color="white" variant="h6">
-          Empty 
+          Пусто 
         </Typography>
       }
     </Box>

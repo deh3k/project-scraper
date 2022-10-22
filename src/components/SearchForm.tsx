@@ -31,13 +31,13 @@ export default function SearchForm(props: IProps) {
       <form onSubmit={onSubmit}>
         <Box display="flex" sx={{ p: '0 15px' }}>
           <WhiteBorderTextField
-            placeholder="Enter keyword"
+            placeholder="Введите ключевое слово"
             variant='standard'
             value={term}
             onChange={(e) => setTerm(e.currentTarget.value)}
             sx={{ 'input': { color: 'white' }, width: '100%', mr: '18px' }}
           />
-          <Button type="submit" variant="contained" color="primary">Search</Button>
+          <Button type="submit" variant="contained" color="primary">Поиск</Button>
         </Box>
       </form>
     </Box>
